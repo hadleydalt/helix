@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# How to run! 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Open 3 terminals. 
+2. In each one, cd into sellscale_agentic_hr. 
+3. In two of them, make sure the virtual environment is activated by running "source venv/bin/activate" on Mac/Linux or "venv\Scripts\activate" on Windows
+4. If the requirements are not installed you can run "pip install -r requirements.txt" in one terminal. 
+5. In one terminal, run "python setup_db.py"
+6. In another terminal, run "python app.py"
+NOTe: Every terminal you run a Python script in should have the virtual environment activated. 
+7. In your last terminal, run "npm start". If something is wrong, you may need to run "npm install" first. 
+8. You should now be able to navigate to the localhost provided in the terminal (probably http://localhost:3000) and view the project!
+9. Let me know if you encounter any issues. 
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+BUGS: 
+1. There is a bug where in order to edit the sequence, you have to explicitly tell it to edit the sequence (for example, "Please edit the sequence to add a final step to let them know i'm always available around the clock for questions" rather than "Add a final step"). 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+How I would solve if I had more time: I would configure the "brain"/seed message so that the instructions are more clear and the LLM is able to recognize when to edit the sequence without the explicit word "edit". 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. After generating, editing or deleting a step from a sequence, the confirmation message appears at the bottom of the sequence rather than in the chatbox. This was very frustrating. 
 
-### `npm test`
+If given more time, I would experiment more with the exact configurations that are causng this bug. (i.e., how the message is being sent to the frontend, when it is being generated in relation to the sequence, etc)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Sequences are stored locally rather than in the database. 
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If given more time, I would have set up the database configurations more effectively so that the database would be able to store and retrieve the sequences rather than them being stored in a local variable user_sessions. In some commented-out code, I showed the functions I wrote to attempt to approach this problem but they unfortunately did not work properly so if given more time, I would debug further. 
