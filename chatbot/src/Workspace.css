@@ -1,0 +1,66 @@
+.main-content {
+  flex: 1;
+  padding: 20px;
+  height: 100vh;
+  background-color: white;
+  overflow-y: auto;
+  margin-left: 40%; /* Match the width of the Chatbot container */
+  box-sizing: border-box;
+}
+
+.content-box {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.content-box h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.content-box p {
+  color: #666;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.sequence-content {
+  margin-top: 15px;
+  white-space: pre-wrap;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.message-box {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.message-header {
+  background-color: #ffffff;
+  padding: 12px 15px;
+  border-bottom: 1px solid #dee2e6;
+  font-weight: 600;
+  color: #333;
+}
+
+.message-body {
+  padding: 15px;
+}
+
+.message-body p {
+  margin: 5px 0;
+  line-height: 1.5;
+  color: #333;
+} 
