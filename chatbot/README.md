@@ -7,7 +7,7 @@
 5. In one terminal, run "python setup_db.py"
 6. In another terminal, run "python app.py"
 NOTe: Every terminal you run a Python script in should have the virtual environment activated. 
-7. In your last terminal, run "npm start". If something is wrong, you may need to run "npm install" first. 
+7. In your last terminal, cd into "Chatbot" and run "npm start". If something is wrong, you may need to run "npm install" first. 
 8. You should now be able to navigate to the localhost provided in the terminal (probably http://localhost:3000) and view the project!
 9. Let me know if you encounter any issues. 
 
